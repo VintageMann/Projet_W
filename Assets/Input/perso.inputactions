@@ -8,7 +8,7 @@
                 {
                     "name": "Fire",
                     "type": "Button",
-                    "id": "3d95c593-eca6-4797-ab82-3ea4772abbb4",
+                    "id": "1abf56e9-1ca8-4241-9553-a04346695ab7",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -36,20 +36,17 @@
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Rotate",
+                    "type": "Value",
+                    "id": "e91a2fdf-405a-417f-9051-6467b46e20f1",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "9df67a0a-b960-4c2e-a540-c1c918afd875",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Fire",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "2D Vector",
                     "id": "f3a31b1f-4cd7-4f42-9850-672991c9caf9",
@@ -146,6 +143,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c922a7bb-80ca-4cbd-ab41-27478cdcadc2",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4e0147a0-ffe2-4b98-b855-0f48bbca59be",
+                    "path": "<XInputController>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c9e0ff5-b868-4fe4-9537-e93945b768c0",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

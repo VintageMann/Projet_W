@@ -1,0 +1,44 @@
+{
+    "name": "projectile",
+    "maps": [
+        {
+            "name": "Projectile",
+            "id": "6e6290ae-7354-46fe-9e7a-f172ff2430c6",
+            "actions": [
+                {
+                    "name": "Aim",
+                    "type": "Button",
+                    "id": "898ddbcb-9d37-46f7-9e33-4769b18f186d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d4758899-f9d6-40d7-9311-7acd1618476b",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Dash",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b48860ef-b4a0-4f13-893a-0b1a895ef288",
+                    "path": "<Gamepad>/rightStick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Aim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -10,6 +10,7 @@ public class Deplacement : MonoBehaviour
     Vector2 aim;
     public float speed;
     public float dashDistance;
+    public Vector3 targetRotation;
 
     void Awake(){
         controls = new PlayerControls();
@@ -19,9 +20,16 @@ public class Deplacement : MonoBehaviour
         controls.Player.Aim.performed += ctx => aim = ctx.ReadValue<Vector2>().normalized;
     }
 
+    void Start(){
+        StartCoroutine(Rotate(Quaternion.Euler(targetRotation), 3));
+    }
+
     void Update(){
         Vector3 m = new Vector3(move.x, 0.0f, move.y) * speed * Time.deltaTime;
         transform.Translate(m, Space.World);
+
+        Vector3 r = new Vector3(0.0f, aim.y, 0.0f) * 100f * Time.deltaTime;
+        transform.Rotate(r, Space.World);
     }
 
     void OnEnable(){
@@ -43,6 +51,19 @@ public class Deplacement : MonoBehaviour
             yield return null;
         }
         transform.position = targetPosition;    
+    }
+
+    IEnumerator Rotate(Quaternion endValue, float duration){
+        float time = 1;
+        Quaternion startValue = transform.rotation;
+
+        while (time < duration)
+        {
+            transform.rotation = Quaternion.Lerp(startValue, endValue, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.rotation = endValue;
     }
 }
 

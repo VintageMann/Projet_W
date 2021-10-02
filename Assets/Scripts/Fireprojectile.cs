@@ -6,23 +6,27 @@ public class Fireprojectile : MonoBehaviour
 {
 	public float bulletSpeed = 10;
 	public Rigidbody bullet;
-	PlayerControls controls;
-    Vector3 move;
     public float speed = 3;
+    public float rotationRate = 360;
+    PlayerControls controls;
+    Vector3 move;
+    Vector3 aim;
+
 
     void Awake(){
         controls = new PlayerControls();
         controls.Player.Fire.performed += ctx => Fire();
+        controls.Player.Aim.performed += ctx => aim = ctx.ReadValue<Vector2>().normalized;
     }
 
     void Update(){
-		Vector3 m = new Vector3(move.x, 0.0f, move.y) * speed * Time.deltaTime;
-		transform.Translate(m, Space.World); 
     }
 
     void Fire(){
 		Rigidbody bulletClone = Instantiate(bullet, transform.position, transform.rotation);
-		bulletClone.velocity = transform.forward * bulletSpeed;
+		bulletClone.GetComponent<Rigidbody>().AddForce(transform.forward * 10000);
+        
+
     }
 
     void OnEnable(){
