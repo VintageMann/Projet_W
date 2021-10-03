@@ -18,8 +18,6 @@ public class Shieldplayer : MonoBehaviour{
     public void SpawnShield(){
     	Rigidbody newShield = Instantiate(shield);
         newShield.transform.position = player.transform.position;
-        float degree = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
-        //bulletClone.transform.Rotate(0, degree, 0);
         newShield.transform.forward = new Vector3(aim.x, 0, aim.y);
     }
 

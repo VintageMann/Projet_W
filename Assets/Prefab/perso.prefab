@@ -231,6 +231,7 @@ MonoBehaviour:
   player: {fileID: 276948434785326270}
   vortex: {fileID: 0}
   bullet: {fileID: 7111983441176357126, guid: 5c657b1a4e39ac543a3ecf7a2a580cbe, type: 3}
+  shield: {fileID: 4215447770022786639, guid: a3685438f9241e840a07a0c217a847cb, type: 3}
   playerSpeed: 5
   dashDistance: 5
   channelTime: 0
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 298636195087679660}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 86c5e66eed95a644088fd8ee6b39a6e2, type: 3}
   m_Name: 
@@ -371,7 +372,19 @@ MonoBehaviour:
     m_ActionId: 2692d870-0cc5-4f83-b3eb-88c3cdc0c7d4
     m_ActionName: Player/Channel[/Keyboard/c,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6780258507038493344}
+        m_TargetAssemblyTypeName: Controls, Assembly-CSharp
+        m_MethodName: OnShield
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 1396f4e6-1dfc-4e19-8479-887707eb33f4
     m_ActionName: Player/Shield[/XInputControllerWindows/leftTrigger,/Keyboard/b]
   m_NeverAutoSwitchControlSchemes: 0

@@ -9,6 +9,7 @@ public class Controls : MonoBehaviour {
     public Character player;
     public Vortex vortex;
     public Rigidbody bullet;
+    public Rigidbody shield;
 
     private Vector2 movementInput;
     private Vector2 aimInput;
@@ -50,6 +51,14 @@ public class Controls : MonoBehaviour {
 
     }
 
+    public void OnShield(InputAction.CallbackContext ctx) {
+        Rigidbody shieldClone = Instantiate(shield);
+        shieldClone.transform.position = transform.position;
+        shieldClone.transform.forward = new Vector3(aimInput.x, 0, aimInput.y);
+        Debug.Log($"{name} starting coroutine", this);
+        StartCoroutine(Cooldown());
+    }
+
     void Update() {
         Vector3 playerMovement = new Vector3 (movementInput.x, 0, movementInput.y) * playerSpeed * Time.deltaTime;
         transform.Translate(playerMovement);
@@ -80,6 +89,16 @@ public class Controls : MonoBehaviour {
             player.PickElement(vortex.GetRecentElement());
             vortex.DestroyRecetElement();
         }    
+        controls.Player.Enable();
+    }
+
+    IEnumerator Cooldown() {
+        float t = 1f; 
+        controls.Player.Disable();
+        while (t > 0) {
+            t -= Time.deltaTime;
+            yield return null;
+        }
         controls.Player.Enable();
     }
 }

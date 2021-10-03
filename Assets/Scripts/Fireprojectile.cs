@@ -29,7 +29,6 @@ public class Fireprojectile : MonoBehaviour
     void Fire(){
     	Rigidbody bulletClone = Instantiate(bullet);
         bulletClone.transform.position = player.transform.position;
-        float degree = Mathf.Atan2(aim.y, aim.x) * Mathf.Rad2Deg;
         bulletClone.transform.forward = new Vector3(aim.x, 0, aim.y);
     	bulletClone.GetComponent<Rigidbody>().AddForce(bulletClone.transform.forward * 1000);
     }

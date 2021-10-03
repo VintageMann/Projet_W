@@ -7,7 +7,7 @@
             "actions": [
                 {
                     "name": "Fire",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "1abf56e9-1ca8-4241-9553-a04346695ab7",
                     "expectedControlType": "Button",
                     "processors": "",
