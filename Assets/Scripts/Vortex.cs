@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Vortex : MonoBehaviour {
 
-    public GameObject element;
+    public Element element;
     public float cooldown;
+    private Element recentElement;
+    public GameObject gameCanvas;
 
     void Awake () {
         StartCoroutine(Cooldown());
@@ -21,7 +23,17 @@ public class Vortex : MonoBehaviour {
             cd -= Time.deltaTime;
             yield return null;
         }
-        GameObject cloneElement = Instantiate(element);
+        recentElement = Instantiate(element, gameCanvas.transform);
     }
 
+    public void DestroyRecetElement() {
+        if (recentElement == null) {
+            return;
+        }
+        Destroy(recentElement.gameObject);
+    }
+
+    public Element GetRecentElement() {
+        return recentElement;
+    }
 }

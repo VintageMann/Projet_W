@@ -38,10 +38,10 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Rotate",
-                    "type": "Value",
-                    "id": "e91a2fdf-405a-417f-9051-6467b46e20f1",
-                    "expectedControlType": "Vector2",
+                    "name": "Channel",
+                    "type": "Button",
+                    "id": "2692d870-0cc5-4f83-b3eb-88c3cdc0c7d4",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
                 }
@@ -170,12 +170,12 @@
                 },
                 {
                     "name": "",
-                    "id": "9c9e0ff5-b868-4fe4-9537-e93945b768c0",
-                    "path": "<Gamepad>/rightStick",
+                    "id": "230981ea-5343-46e7-9fcf-8340102b8603",
+                    "path": "<Keyboard>/c",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Rotate",
+                    "action": "Channel",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

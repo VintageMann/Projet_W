@@ -43,6 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ac988a8f2cd0dd4782b06571d1d370a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minDuree: 2
-  maxDuree: 4
+  minDuree: 6
+  maxDuree: 10
+  alive: 1
   type: 0

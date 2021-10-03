@@ -6,6 +6,7 @@ using UnityEngine.InputSystem;
 public class Deplacement : MonoBehaviour
 {
     PlayerControls controls;
+    
     Vector2 move;
     Vector2 aim;
     public float speed;

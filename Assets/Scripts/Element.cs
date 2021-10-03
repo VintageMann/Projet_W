@@ -1,21 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Element : MonoBehaviour
 {
-    public enum Elements {Feu, Eau, Terre, Foudre, Lumiere, Vide}; 
+    public enum Elements {Feu, Eau, Terre, Foudre, Lumiere, Vide, Aucun}; 
 
     public float minDuree;
     public float maxDuree;
-    public bool alive = true;
-    bool held;
     public Elements type;
+    public Image elementImage;
 
     // Start is called before the first frame update
 
     void Awake() {
         type = (Elements)Random.Range(0,5);
+        elementImage.sprite = Resources.Load<Sprite>(type.ToString());
         StartCoroutine(Lifespan());
     }
 

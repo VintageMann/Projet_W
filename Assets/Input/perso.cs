@@ -51,10 +51,10 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Rotate"",
-                    ""type"": ""Value"",
-                    ""id"": ""e91a2fdf-405a-417f-9051-6467b46e20f1"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""name"": ""Channel"",
+                    ""type"": ""Button"",
+                    ""id"": ""2692d870-0cc5-4f83-b3eb-88c3cdc0c7d4"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -183,12 +183,12 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9c9e0ff5-b868-4fe4-9537-e93945b768c0"",
-                    ""path"": ""<Gamepad>/rightStick"",
+                    ""id"": ""230981ea-5343-46e7-9fcf-8340102b8603"",
+                    ""path"": ""<Keyboard>/c"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Rotate"",
+                    ""action"": ""Channel"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -203,7 +203,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_Aim = m_Player.FindAction("Aim", throwIfNotFound: true);
-        m_Player_Rotate = m_Player.FindAction("Rotate", throwIfNotFound: true);
+        m_Player_Channel = m_Player.FindAction("Channel", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -257,7 +257,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
     private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_Aim;
-    private readonly InputAction m_Player_Rotate;
+    private readonly InputAction m_Player_Channel;
     public struct PlayerActions
     {
         private @PlayerControls m_Wrapper;
@@ -266,7 +266,7 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @Aim => m_Wrapper.m_Player_Aim;
-        public InputAction @Rotate => m_Wrapper.m_Player_Rotate;
+        public InputAction @Channel => m_Wrapper.m_Player_Channel;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -288,9 +288,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Aim.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
                 @Aim.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
                 @Aim.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAim;
-                @Rotate.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
-                @Rotate.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
-                @Rotate.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRotate;
+                @Channel.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChannel;
+                @Channel.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChannel;
+                @Channel.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnChannel;
             }
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
@@ -307,9 +307,9 @@ public class @PlayerControls : IInputActionCollection, IDisposable
                 @Aim.started += instance.OnAim;
                 @Aim.performed += instance.OnAim;
                 @Aim.canceled += instance.OnAim;
-                @Rotate.started += instance.OnRotate;
-                @Rotate.performed += instance.OnRotate;
-                @Rotate.canceled += instance.OnRotate;
+                @Channel.started += instance.OnChannel;
+                @Channel.performed += instance.OnChannel;
+                @Channel.canceled += instance.OnChannel;
             }
         }
     }
@@ -320,6 +320,6 @@ public class @PlayerControls : IInputActionCollection, IDisposable
         void OnMove(InputAction.CallbackContext context);
         void OnDash(InputAction.CallbackContext context);
         void OnAim(InputAction.CallbackContext context);
-        void OnRotate(InputAction.CallbackContext context);
+        void OnChannel(InputAction.CallbackContext context);
     }
 }
