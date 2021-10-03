@@ -6,10 +6,13 @@ using UnityEngine.InputSystem;
 
 public class Projectile : MonoBehaviour{
 	public GameObject explosion;
-	public float lifespan = 3f;
+	public float lifespan;
 
    void Start(){  
        Destroy(gameObject, lifespan);
+   }
+   public void setDirection(Vector2 direction) {
+       
    }
 }
 
