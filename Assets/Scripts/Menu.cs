@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
 	public Button btn;
+	public string scenename;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,13 +15,7 @@ public class Menu : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
 	void LoadScene(){
-		SceneManager.LoadScene("Fight");
+		SceneManager.LoadScene(scenename);
 	}
 }
