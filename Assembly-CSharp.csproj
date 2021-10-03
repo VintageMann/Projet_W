@@ -56,13 +56,14 @@
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\SpriteAnimator.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\Deplacement.cs" />
     <Compile Include="Assets\Scripts\Element.cs" />
-    <Compile Include="Assets\Scripts\Fireprojectile.cs" />
-    <Compile Include="Assets\Scripts\Attacks.cs" />
     <Compile Include="Assets\Input\projectile.cs" />
     <Compile Include="Assets\Input\perso.cs" />
     <Compile Include="Assets\Scripts\Vortex.cs" />
+    <Compile Include="Assets\Scripts\Controls.cs" />
+    <Compile Include="Assets\Scripts\Shield.cs" />
+    <Compile Include="Assets\Scripts\Menu.cs" />
+    <Compile Include="Assets\Scripts\Shieldplayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
