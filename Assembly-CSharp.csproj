@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Controls.cs" />
      <Compile Include="Assets\Input\perso.cs" />
      <Compile Include="Assets\Scripts\Vortex.cs" />
+     <Compile Include="Assets\Scripts\Fireprojectile.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
