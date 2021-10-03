@@ -40,10 +40,8 @@
      <Compile Include="Assets\Scripts\Element.cs" />
      <Compile Include="Assets\Scripts\Vortex.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
-     <Compile Include="Assets\Scripts\Deplacement.cs" />
-     <Compile Include="Assets\Scripts\Attacks.cs" />
      <Compile Include="Assets\Scripts\Character.cs" />
-     <Compile Include="Assets\Scripts\Fireprojectile.cs" />
+     <Compile Include="Assets\Scripts\Controls.cs" />
      <Compile Include="Assets\Input\perso.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.23f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
