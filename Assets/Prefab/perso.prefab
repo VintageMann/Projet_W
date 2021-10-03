@@ -14,10 +14,15 @@ GameObject:
   - component: {fileID: 8779180317315232591}
   - component: {fileID: 8779180317315232588}
   - component: {fileID: 8779180317315232587}
+<<<<<<< Updated upstream
   - component: {fileID: 8746268654583480087}
+=======
+  - component: {fileID: 8779180317315232586}
+  - component: {fileID: 5104309864687765729}
+>>>>>>> Stashed changes
   - component: {fileID: 8779180317315232579}
   m_Layer: 0
-  m_Name: Perso
+  m_Name: perso
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,6 +121,39 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+<<<<<<< Updated upstream
+=======
+--- !u!114 &8779180317315232578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779180317315232576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47862ccd91285a14b9a62a711e21cf52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vortex: {fileID: 0}
+  player: {fileID: 0}
+  channelTime: 0
+--- !u!114 &8779180317315232589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779180317315232576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82933207d22bf8a49bc21ddfdbeeb22d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  dashDistance: 10
+  targetRotation: {x: 0, y: 0, z: 0}
+>>>>>>> Stashed changes
 --- !u!114 &8779180317315232587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,13 +163,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 8779180317315232576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1c6c60a631c6c4d978942e8ad1a5e7, type: 3}
+  m_Script: {fileID: 11500000, guid: d715a07f746ef0442a147467e39d41da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   Health: 10
   holding: 6
   affinity: 3
 --- !u!114 &8746268654583480087
+=======
+  Health: 0
+  holding: 0
+  affinity: 0
+--- !u!114 &8779180317315232586
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -146,9 +191,28 @@ MonoBehaviour:
   player: {fileID: 8779180317315232587}
   vortex: {fileID: 0}
   bullet: {fileID: 7111983441176357126, guid: 5c657b1a4e39ac543a3ecf7a2a580cbe, type: 3}
+<<<<<<< Updated upstream
   playerSpeed: 5
   dashDistance: 5
   channelTime: 0
+=======
+  wait: 500
+  cooldown: 0
+--- !u!114 &5104309864687765729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779180317315232576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7674864bc71aa7d43a010f4b2ed5a5d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 8779180317315232588}
+  shield: {fileID: 4215447770022786639, guid: 138510672f93ae74f87887bf2da9bafb, type: 3}
+>>>>>>> Stashed changes
 --- !u!114 &8779180317315232579
 MonoBehaviour:
   m_ObjectHideFlags: 0
