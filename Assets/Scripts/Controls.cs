@@ -47,10 +47,7 @@ public class Controls : MonoBehaviour {
     }
 
     public void OnFire(InputAction.CallbackContext ctx) {
-    	Rigidbody bulletClone = Instantiate(bullet);
-        bulletClone.transform.position = player.transform.position;
-        bulletClone.transform.forward = new Vector3(aimInput.x, 0, aimInput.y);
-    	bulletClone.GetComponent<Rigidbody>().AddForce(bulletClone.transform.forward * 1000);
+
     }
 
     void Update() {
