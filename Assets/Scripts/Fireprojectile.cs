@@ -7,9 +7,7 @@ public class Fireprojectile : MonoBehaviour
     public Rigidbody player;
 	public float bulletSpeed = 10;
 	public Rigidbody bullet;
-    public float wait = 500;
-    PlayerControls controls;
-    public float cooldown;
+    PlayerControls controls;    
     Vector2 aim;
 
 
