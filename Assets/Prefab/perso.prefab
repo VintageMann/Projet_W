@@ -110,8 +110,6 @@ GameObject:
   - component: {fileID: 1176380024578163289}
   - component: {fileID: 276948434785326270}
   - component: {fileID: 6780258507038493344}
-  - component: {fileID: 9012928530847116978}
-  - component: {fileID: 5996096659705354575}
   - component: {fileID: 7632464279755948917}
   - component: {fileID: 1173126277085076962}
   - component: {fileID: 1692097386}
@@ -235,37 +233,6 @@ MonoBehaviour:
   playerSpeed: 5
   dashDistance: 5
   channelTime: 0
---- !u!114 &9012928530847116978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298636195087679660}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c5e66eed95a644088fd8ee6b39a6e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1173126277085076962}
-  shield: {fileID: 4215447770022786639, guid: a3685438f9241e840a07a0c217a847cb, type: 3}
---- !u!114 &5996096659705354575
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 298636195087679660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca372d62e79804e469d714b8d41c1787, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1173126277085076962}
-  bulletSpeed: 10
-  bullet: {fileID: 7111983441176357126, guid: 5c657b1a4e39ac543a3ecf7a2a580cbe, type: 3}
-  wait: 500
-  cooldown: 0
 --- !u!114 &7632464279755948917
 MonoBehaviour:
   m_ObjectHideFlags: 0
