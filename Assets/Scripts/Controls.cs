@@ -48,15 +48,16 @@ public class Controls : MonoBehaviour {
     }
 
     public void OnFire(InputAction.CallbackContext ctx) {
-
+        Rigidbody bulletClone = Instantiate(bullet);
+        bulletClone.transform.position = this.transform.position;
+        bulletClone.transform.forward = new Vector3(aimInput.x, 0, aimInput.y);
+    	bulletClone.GetComponent<Rigidbody>().AddForce(bulletClone.transform.forward * 1000);
     }
 
     public void OnShield(InputAction.CallbackContext ctx) {
         Rigidbody shieldClone = Instantiate(shield);
-        shieldClone.transform.position = transform.position;
+        shieldClone.transform.position = this.transform.position;
         shieldClone.transform.forward = new Vector3(aimInput.x, 0, aimInput.y);
-        Debug.Log($"{name} starting coroutine", this);
-        StartCoroutine(Cooldown());
     }
 
     void Update() {
